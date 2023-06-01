@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Detalle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="product-detail-content">
+  <div class="product-detail-container">
+    <div class="product-detail-image">
+      <ion-img src="assets/Pink.png"></ion-img>
+    </div>
+    <div class="product-detail-info">
+      <h1 class="product-detail-name">{{nom}}</h1>
+      <p class="product-detail-price">Precio: {{price}} </p>
+      <ion-button expand="full" class="product-detail-button" (click)="addToCart()">Añadir al carrito</ion-button>
+      <ion-button expand="full" class="product-detail-share-button">Compartir</ion-button>
+      <p class="product-detail-description">{{desc}}</p>  
+    </div>
+  </div>
+</ion-content>

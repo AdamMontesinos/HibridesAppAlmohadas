@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Carrito</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="cart-content">
+  <ion-list class="cart-list">
+    <ion-item *ngFor="let producto of productosEnCarrito">
+      <ion-thumbnail slot="start">
+        <ion-img [src]="producto.imagen"></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>{{ producto.nombre }}</h3>
+        <p>Cantidad: {{ producto.cantidad }}</p>
+        <p>Total: {{ getTotal(producto) }}</p>
+      </ion-label>      
+      <ion-button color="danger" (click)="removeProduct(producto)">Eliminar</ion-button>
+      <ion-button color="primary" (click)="decreaseQuantity(producto)">-</ion-button>
+      <ion-button color="primary" (click)="increaseQuantity(producto)">+</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <div class="cart-summary">
+    <h4>Total: {{ getTotalCarrito() }}</h4>
+    <ion-button expand="full" color="primary" (click)="goToCheckout()">Checkout</ion-button>
+  </div>
+</ion-content>

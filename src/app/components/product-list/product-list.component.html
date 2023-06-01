@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Productos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="product-list">
+    <ion-item-sliding *ngFor="let product of productes" (click)="navigateToDetail(product.id)">
+      <div class="product-item">
+        <div class="product-image">
+          <ion-img src="{{product.img}}"></ion-img>
+        </div>
+        <div class="product-details">
+          <h3 class="product-name">{{product.nom}}</h3>
+        </div>
+      </div>
+      <ion-item-options side="end">
+        <ion-item-option color="success">
+          <ion-icon slot="icon-only" name="cart"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </div>
+</ion-content>

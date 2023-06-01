@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Perfil
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="profile-header">
+    <img class="profile-picture" src="assets/Pink.png" alt="Imagen de perfil">
+    <h1 class="profile-name">Username</h1>
+    <p class="profile-bio">Información</p>
+  </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-icon name="mail"></ion-icon>
+      <ion-label>Correo electrónico</ion-label>
+      <ion-note>correo@example.com</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="calendar"></ion-icon>
+      <ion-label>Fecha de nacimiento</ion-label>
+      <ion-note>04 de julio de 2001</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="location"></ion-icon>
+      <ion-label>Ubicación</ion-label>
+      <ion-note>Ciudad, Barcelona</ion-note>
+    </ion-item>
+  </ion-list>
+
+  <div class="profile-stats">
+    <div class="profile-stat">
+      <h2>Seguidores</h2>
+      <p>1000</p>
+    </div>
+  </div>
+</ion-content>
